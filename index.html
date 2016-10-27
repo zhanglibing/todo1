@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no，width=device-width"
+          content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="contact">
+    <link rel="todos-touch-icon" type="imgage/x-icone" href="icon.jpg">
+    <link rel="icon" href="img/icon.jpg">
+    <title>备忘录</title>
+    <script src="jquery.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!--1080px  168px-->
+<!--<div class="continer">-->
+<div class="header">
+    <div class="left">
+        <div class="menue">
+            <div class="icon-font icon-caidan"></div>
+        </div>
+        <div class="current">进行中</div>
+    </div>
+    <div class="right">
+        <div class="new">
+            <div class="jiahao icon-font icon-jiahao"></div>
+        </div>
+        <div class="search">
+            <div class="icon-font icon-sousuo"></div>
+        </div>
+    </div>
+</div>
+<div class="choose">
+    <div class="c-content">
+        <h1>选择标签</h1>
+        <ul>
+            <li>
+                <span class="circle"></span>
+                <span class="study">学习</span>
+            </li>
+        </ul>
+        <div class="cancel"></div>
+    </div>
+</div>
+
+<div class="content">
+    <ul class="list"></ul>
+    <div class="icon-font icon-rili"></div>
+    <div class="reminder">无进行中的事项
+        <span class="add">添加一个事项</span>
+    </div>
+</div>
+<div class="mask">
+    <div class="left">
+        <div class="icon-font icon-fanhui"></div>
+    </div>
+    <div class="middle">
+        <input type="text">
+    </div>
+    <div class="right">
+        <div class="icon-font icon-sousuo"></div>
+    </div>
+</div>
+<div class="menue-mask"></div>
+<div class="menue-list">
+    <ul>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-biaozhuanhuan"></div>
+            </div>
+            <div class="fun">进行中</div>
+            <!--<div style="clear: both;"></div>-->
+        </li>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-bi"></div>
+            </div>
+            <div class="fun">娱乐</div>
+        </li>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-bi"></div>
+            </div>
+            <div class="fun">工作</div>
+        </li>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-bi"></div>
+            </div>
+            <div class="fun">其他</div>
+        </li>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-duigou"></div>
+            </div>
+            <div class="fun">已完成</div>
+        </li>
+        <li>
+            <div class="left">
+                <div class="icon-font icon-biaopaiguanli"></div>
+            </div>
+            <div class="fun">管理标签</div>
+        </li>
+        <!--<li>-->
+        <!--<div class="left">-->
+        <!--<div class="icon-font icon-guanli"></div>-->
+        <!--</div>-->
+        <!--<div class="fun">设置</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+<div class="new-page">
+    <div class="header">
+        <div class="left">
+            <div class="fanhui">
+                <div class="icon-font icon-fanhui"></div>
+            </div>
+            <div class="xinjian">新建</div>
+        </div>
+        <div class="right">
+            <div class="sure">
+                <div class="icon-font icon-duigou"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <span>事项</span>
+        <input type="text" placeholder="请输入您的事项..." class="special">
+        <span>备注</span>
+        <input type="text" placeholder="可以添加一些标签..." class="label">
+        <div class="fenlei">
+            <span>标签</span>
+            <span class="none">无</span>
+            <span class="circle"></span>
+        </div>
+        <span>截止时间</span>
+        <input type="text" value="" class="end-line">
+        <span>提醒时间</span>
+        <input type="text" value="" class="remind-time">
+    </div>
+</div>
+</body>
+</html>

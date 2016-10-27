@@ -1,0 +1,566 @@
+@import "mixins";
+
+@include useRem(1080px);
+@font-face {
+  font-family: "iconfont";
+  src: url(iconfont.woff)
+}
+
+.icon-font {
+  font-family: "iconfont";
+}
+
+.icon-caidan:before {
+  content: "\e790";
+}
+
+.icon-sousuo:before {
+  content: "\e63a";
+}
+
+.icon-jiahao:before {
+  content: "\e61e";
+}
+
+.icon-anonymous-iconfont:before {
+  content: "\e62c";
+}
+
+.icon-duigou:before {
+  content: "\e639";
+}
+
+.icon-fanhui:before {
+  content: "\e774";
+}
+
+.icon-biaozhuanhuan:before {
+  content: "\e607";
+}
+
+.icon-bi:before {
+  content: "\345c";
+}
+
+.icon-guanli:before {
+  content: "\e6f6";
+}
+
+.icon-biaopaiguanli:before {
+  content: "\e614";
+}
+
+.icon-zhiding:before {
+  content: "\e625";
+}
+
+.icon-icon70lajitong:before {
+  content: "\e654";
+}
+
+.icon-rili:before {
+  content: "\e620";
+}
+
+body {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  padding: 0 0.5rem;
+  height: 1.68rem;
+  background: #89C348;
+  .left {
+    float: left;
+    width: 50%;
+    .menue {
+      float: left;
+      text-align: center;
+      width: 0.58rem;
+      font-size: 0.58rem;
+      color: #fff;
+      line-height: 1.68rem;
+    }
+    .current {
+      float: left;
+      padding: 0 0.7rem;
+      font-size: 0.55rem;
+      color: #fff;
+      line-height: 1.68rem;;
+    }
+    &::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+  .right {
+    float: right;
+    width: 50%;
+    .search {
+      float: right;
+      text-align: center;
+      width: 0.58rem;
+      font-size: 0.58rem;
+      color: #fff;
+      padding: 0 0.7rem;
+      line-height: 1.68rem;
+      width: 0.72rem;
+    }
+    .new {
+      float: right;
+      font-size: 0.55rem;
+      color: #fff;
+      line-height: 1.68rem;
+      display: block;
+      &.active {
+        display: none;
+      }
+    }
+    &::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+
+}
+
+.content {
+  //padding: 0 0.5rem;
+  position: relative;
+  min-height: 17.51rem;
+  text-align: center;
+  overflow-x: hidden;
+  background: #eee;
+  .list {
+    li {
+      //height: 2.88rem;
+      padding: 0.1rem 0;
+      border-bottom: 0.02rem solid #b4b4b4;
+      text-align: left;
+      position: relative;
+      color: #333;
+      .reminder-time {
+        padding: 0.32rem 0.5rem;
+        text-align: left;
+        color: #88c345;
+        font-size: 0.43rem;
+      }
+      .content-text {
+        padding: 0.32rem 0.5rem;
+        font-size: 0.45rem;
+      }
+      .complete-time {
+        padding: 0.32rem 0.5rem;
+        font-size: 0.35rem;
+      }
+      .deal {
+        position: absolute;
+        //right: -8.1rem;
+        width: 9.2rem;
+        left: 10.8rem;
+        //left: 0;
+        top: 0;
+        height: 100%;
+        text-align: center;
+        color: #d6e9d6;
+        font-size: 0.7rem;
+        line-height: 3.52rem;
+        &.active {
+          //left: 2.7rem;
+          transition: left .3s ease;
+        }
+        &:after {
+          content: '';
+          clear: both;
+        }
+        .bianji {
+          float: right;
+          width: 2.3rem;
+          height: 100%;
+          background: #56F15A;
+          display: block;
+          &.active {
+            display: none;
+          }
+        }
+        .complete {
+          float: right;
+          width: 2.3rem;
+          height: 100%;
+          background: #89c348;
+          display: block;
+          &.active {
+            display: none;
+          }
+        }
+        .set-top {
+          float: right;
+          width: 2.3rem;
+          height: 100%;
+          background: #4baf4f;
+          display: block;
+          &.active {
+            display: none;
+          }
+        }
+        .del {
+          float: right;
+          width: 2.3rem;
+          height: 100%;
+          background: #368e3a;
+          display: block;
+          &.active {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+  .icon-rili {
+    display: none;
+    line-height: 17.51rem;
+    font-size: 4rem;
+    color: #CFCFCF;
+  }
+  .reminder {
+    display: none;
+    color: #6e6e6e;
+    font-size: 0.56rem;
+    text-align: center;
+    width: 100%;
+    //line-height: 9.8rem;
+    font-weight: bold;
+    @include zuoyou;
+    top: 65%;
+    .add {
+      display: block;
+      font-size: 0.5rem;
+      font-weight: normal;
+      padding: 0.7rem 0;
+      //line-height: 0.72rem;
+      //@include zuoyou;
+      //top: 60%;
+      &::after {
+        content: '+';
+        color: #89C348;
+        padding: 0 0.22rem;
+        //font-size: 0.7rem;
+      }
+    }
+  }
+  &.active {
+    .icon-rili {
+      display: block;
+    }
+    .reminder {
+      display: block;
+    }
+  }
+}
+
+//.touch-left{ animation: move-left .8s linear }
+//@keyframes move-left {
+//  0% {
+//    transform: translate3d(0, 0, 0)
+//  }
+//  100% {
+//    transform: translate3d(3rem, 0, 0)
+//  }
+//}
+.mask {
+  display: none;
+  padding: 0 0.5rem;
+  height: 100%;
+  background: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #7e7e7e;
+  text-align: center;
+  &.active {
+    display: block;
+  }
+  &:after {
+    content: '';
+    clear: both;
+  }
+  .left {
+    float: left;
+    padding: 0 0.08rem;
+    text-align: center;
+    width: 0.58rem;
+    font-size: 0.58rem;
+    line-height: 1.68rem;
+  }
+  .middle {
+    float: left;
+    width: 8.32rem;
+    //padding: 0 0.1rem;
+    line-height: 1.68rem;
+    input {
+      border: 0;
+      background: none;
+      border-bottom: 0.03rem solid #fff;
+      width: 100%;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      font-size: 0.5rem;
+    }
+  }
+  .right {
+    padding: 0 0.08rem;
+    float: right;
+    text-align: center;
+    width: 0.58rem;
+    font-size: 0.58rem;
+    line-height: 1.68rem;
+    //width: 0.72rem;
+  }
+}
+
+.menue-mask {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  display: block;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity linear .3s;
+  &.active {
+    left: 0;
+    opacity: 0.3;
+  }
+  &.xiaoshi {
+
+  }
+}
+
+.menue-list {
+  padding-left: 0.6rem;
+  height: 100%;
+  background: #eee;
+  position: absolute;
+  width: 9.12rem;
+  top: 0;
+  left: -9.72rem;
+  z-index: 5;
+  color: #a0a0a0;
+  text-align: center;
+  transition: left linear .3s;
+  &.active {
+    left: 0;
+
+  }
+  ul {
+    li {
+      display: block;
+      //padding-bottom: 0.94rem;
+      //background: red;
+      //height: 0.58rem;
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+      .left {
+        float: left;
+        text-align: center;
+        font-size: 0.58rem;
+        line-height: 1.68rem;
+      }
+      .fun {
+        float: left;
+        padding: 0 1.1rem;
+        color: #1b1b1b;
+        font-size: 0.38rem;
+        text-align: center;
+        line-height: 1.68rem;
+
+      }
+    }
+  }
+}
+
+.new-page {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  background: #eee;
+  height: 100%;
+  z-index: 3;
+  &.active {
+    display: block;
+  }
+  .header {
+    padding: 0 0.5rem;
+    height: 1.68rem;
+    background: #89C348;
+    .left {
+      float: left;
+      width: 50%;
+      .fanhui {
+        float: left;
+        text-align: center;
+        width: 0.58rem;
+        font-size: 0.58rem;
+        color: #fff;
+        line-height: 1.68rem;
+      }
+      .xinjian {
+        float: left;
+        padding: 0 0.7rem;
+        font-size: 0.55rem;
+        color: #fff;
+        line-height: 1.68rem;;
+      }
+      &::after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+    }
+    .right {
+      float: right;
+      width: 50%;
+      .sure {
+        float: right;
+        font-size: 0.55rem;
+        color: #fff;
+        line-height: 1.68rem;;
+      }
+      &::after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+    }
+
+  }
+  .bottom {
+    padding: 0.6rem 0.5rem 0;
+    position: relative;
+    min-height: 16.8rem;
+    text-align: center;
+    //height: 100%;
+    background: #eee;
+    text-align: left;
+    .fenlei {
+      height: 0.9rem;
+      line-height: 0.9rem;
+      span {
+        float: left;
+        display: block;
+        height: 100%;
+        width: 50%;
+      }
+      .circle {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        float: right;
+        background: #000;
+        margin-top: 0.2rem;
+      }
+      .none {
+        width: 0.5rem;
+        float: right;
+      }
+    }
+    span {
+      display: block;
+      font-size: 0.44rem;
+      color: #6b6b6b;
+    }
+    input {
+      margin: 0.2rem 0;
+      width: 100%;
+      border: 0;
+      border-bottom: 0.06rem solid #6c6c6c;
+      background: none;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      font-size: 0.5rem;
+    }
+    .special {
+      border-bottom: 0.06rem solid #88c544;
+      //height: 0.5rem;
+      //line-height: 0.5rem;
+      //font-size: 0.4rem;
+    }
+    .move {
+      animation: move .3s linear 3 alternate;
+    }
+    @keyframes move {
+      0% {
+        transform: translate3d(0, 0, 0)
+      }
+      100% {
+        transform: translate3d(0.2rem, 0, 0)
+      }
+    }
+  }
+}
+
+.choose {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  //position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  display: none;
+  &.active {
+    display: block;
+  }
+  .c-content {
+    width: 9.31rem;
+    height: 8.6rem;
+    background: #fff;
+    border-radius: 0.05rem;
+    min-height: 8.6rem;
+    //position: absolute;
+    //top: ;
+    @include center;
+    h1 {
+      height: 1.67rem;
+      font-size: 0.55rem;
+      padding: 0 0.76rem;
+      line-height: 1.67rem;
+    }
+    ul li {
+      height: 0.76rem;
+      border-bottom: 1px solid #ccc;
+      .circle {
+        display: block;
+        float: left;
+        margin-left: 0.7rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: #000;
+        border-radius: 50%;
+      }
+      .study {
+        float: left;
+        display: block;
+        font-size: 0.45rem;
+        //line-height: 0.8rem;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
